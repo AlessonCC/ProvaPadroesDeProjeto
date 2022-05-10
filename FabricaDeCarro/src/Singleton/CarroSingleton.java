@@ -1,5 +1,7 @@
 package Singleton;
-
+import Adapter.adapterTXT;
+import Adapter.adapterXML;
+import Adapter.ArquivoTarget;
 public class CarroSingleton {
     private int log;
 
@@ -17,6 +19,14 @@ public class CarroSingleton {
     }
     public String report(){
         return new String("Total de logs no sistema : " + log);
+    }
+    public String logXML(){
+        ArquivoTarget adapterXML = new adapterXML();
+        return adapterXML.printarArquivo();
+    }
+    public String logTXT(){
+        ArquivoTarget adapterTXT = new adapterTXT();
+        return adapterTXT.printarArquivo();
     }
 
 
