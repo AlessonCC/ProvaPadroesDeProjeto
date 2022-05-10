@@ -1,4 +1,6 @@
 package Adapter;
+import Factory.Carro;
+import Factory.FabricaDeCarro;
 
 public class adapterTXT implements ArquivoTarget{
     @Override
