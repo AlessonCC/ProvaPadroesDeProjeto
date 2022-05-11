@@ -1,5 +1,5 @@
 package Factory;
 
 public interface FabricaDeCarro {
-    Carro criarCarro();
+    Carro criarCarro(String nome);
 }
