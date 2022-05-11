@@ -2,9 +2,12 @@ package Singleton;
 import Adapter.adapterTXT;
 import Adapter.adapterXML;
 import Adapter.ArquivoTarget;
-public class CarroSingleton {
-    private int log;
 
+import java.util.ArrayList;
+
+public class CarroSingleton {
+    ArrayList <String> Dados = new ArrayList<>();
+    private int log;
     private static CarroSingleton instance;
     private CarroSingleton(){}
 
@@ -14,19 +17,13 @@ public class CarroSingleton {
         return instance;
     }
     public String newLog(){
-        ++log;
-        return new String("LogRealizado: " +log);
-    }
-    public String report(){
-        return new String("Total de logs no sistema : " + log);
+        Dados.add();
     }
     public String logXML(){
-        ArquivoTarget adapterXML = new adapterXML();
-        return adapterXML.printarArquivo();
+        return Dados.toString();
     }
     public String logTXT(){
-        ArquivoTarget adapterTXT = new adapterTXT();
-        return adapterTXT.printarArquivo();
+        return Dados.toString();
     }
 
 
